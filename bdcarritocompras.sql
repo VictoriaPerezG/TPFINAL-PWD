@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2022 a las 15:21:47
+-- Tiempo de generación: 01-12-2022 a las 01:19:31
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.8
 
@@ -34,14 +34,6 @@ CREATE TABLE `compra` (
   `idusuario` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `compra`
---
-
-INSERT INTO `compra` (`idcompra`, `cofecha`, `idusuario`) VALUES
-(1, '2022-11-25 09:42:32', 1),
-(2, '2022-11-25 09:43:16', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -55,20 +47,6 @@ CREATE TABLE `compraestado` (
   `cefechaini` timestamp NOT NULL DEFAULT current_timestamp(),
   `cefechafin` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `compraestado`
---
-
-INSERT INTO `compraestado` (`idcompraestado`, `idcompra`, `idcompraestadotipo`, `cefechaini`, `cefechafin`) VALUES
-(1, 1, 1, '2022-11-25 09:42:33', '2022-11-25 09:42:44'),
-(2, 1, 2, '2022-11-25 09:42:44', '2022-11-25 10:38:19'),
-(3, 2, 1, '2022-11-25 09:43:17', '2022-11-25 09:43:22'),
-(4, 2, 2, '2022-11-25 09:43:22', '2022-11-25 10:25:09'),
-(5, 2, 5, '2022-11-25 10:25:09', '0000-00-00 00:00:00'),
-(6, 1, 3, '2022-11-25 10:38:19', '2022-11-25 10:47:41'),
-(9, 1, 4, '2022-11-25 10:47:41', '2022-11-25 10:49:42'),
-(10, 1, 5, '2022-11-25 10:49:42', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -125,12 +103,12 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`idmenu`, `menombre`, `medescripcion`, `idpadre`, `medeshabilitado`) VALUES
-(1, 'comprar', 'cliente/index.php', NULL, '2022-11-20 00:59:30'),
-(2, 'miscompras', 'cliente/miscompras.php', NULL, '2022-11-20 01:08:01'),
-(3, 'miperfil', 'cliente/miperfil.php', NULL, '2022-11-20 01:09:16'),
-(4, 'abm productos', 'producto/index.php', NULL, '2022-11-20 01:14:30'),
-(5, 'gestion compras', 'producto/gestionCompras.php', NULL, '2022-11-25 06:53:57'),
-(6, 'abm usuarios', 'usuario/index.php', NULL, '2022-11-25 07:42:49');
+(1, 'Comprar', '../cliente/index.php', NULL, '2022-11-20 00:59:30'),
+(2, 'Mis compras', '../cliente/miscompras.php', NULL, '2022-11-20 01:08:01'),
+(3, 'Mi perfil', '../cliente/miperfil.php', NULL, '2022-11-20 01:09:16'),
+(4, 'Productos', '../producto/index.php', NULL, '2022-11-20 01:14:30'),
+(5, 'Gestion compras', '../producto/gestionCompras.php', NULL, '2022-11-25 06:53:57'),
+(6, 'Usuarios', '../usuario/index.php', NULL, '2022-11-25 07:42:49');
 
 -- --------------------------------------------------------
 
@@ -229,9 +207,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `usnombre`, `uspass`, `usmail`, `usdeshabilitado`) VALUES
-(1, 'ADMIN', '202cb962ac59075b964b07152d234b70', 'patohrg@gmail.com', '0000-00-00 00:00:00'),
-(2, 'CLIENTE', '202cb962ac59075b964b07152d234b70', 'cliente@cliente.com.ar', '0000-00-00 00:00:00'),
-(3, 'DEPOSITO', '202cb962ac59075b964b07152d234b70', 'deposito@deposito.com', '0000-00-00 00:00:00');
+(1, 'ADMIN', '202cb962ac59075b964b07152d234b70', 'ADMIN@ADMIN.COM', NULL),
+(2, 'CLIENTE1', '202cb962ac59075b964b07152d234b70', 'CLIENTE1@CLIENTE1.COM', NULL),
+(3, 'DEPOSITO', '202cb962ac59075b964b07152d234b70', 'DEPOSITO@DEPOSITO.COM', NULL),
+(4, 'CLIENTE2', '202cb962ac59075b964b07152d234b70', 'CLIENTE2@CLIENTE2.COM', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -252,7 +231,8 @@ INSERT INTO `usuariorol` (`idusuario`, `idrol`) VALUES
 (1, 1),
 (1, 3),
 (2, 2),
-(3, 3);
+(3, 3),
+(4, 2);
 
 --
 -- Índices para tablas volcadas
@@ -342,19 +322,19 @@ ALTER TABLE `usuariorol`
 -- AUTO_INCREMENT de la tabla `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `compraestado`
 --
 ALTER TABLE `compraestado`
-  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `compraitem`
 --
 ALTER TABLE `compraitem`
-  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `menu`
