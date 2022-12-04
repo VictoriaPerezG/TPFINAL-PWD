@@ -1,0 +1,212 @@
+
+/*body */
+/*.fondo{
+   background-image: url("../img/fondo.jpg");
+
+}*/
+.fondo{
+  background-image: url("../img/fondo5.jpg");
+   background-size:cover;
+   background-position:center;
+   background-repeat:no-repeat;
+   background-attachment: fixed;
+}
+.titulo{
+  color: #081F91;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Georgia;
+}
+
+.logo{
+  margin-left: 5px; 
+  margin-right: 5px;
+}
+
+
+.boton{
+  border: 2px solid;
+  border-color: #3181C3;
+  transition: all 1s ease;
+  /*position: relative;*/
+  position: relative;
+  padding: 40px 1px; /*arriba-abajo, izq-der*/
+  margin: 0px 30px 30px 0px;
+  float: left;
+  border-radius: 15px; /*redondeo de las esquinas*/
+  /*font-family: 'Georgia', cursive;*/
+  font-family: 'Arial';
+  font-size: 18px; /*tamaño letra*/
+  color: white; /*color letra*/
+  width: 180px !important; /*tamaño botones*/
+  height: 110px !important;
+  text-align: center; /*alineacion de texto*/
+  background: #0072BC;
+}
+
+.boton:hover{
+  -webkit-transform:scale(1.1);transform:scale(1.1); /*Acercamiento*/
+}
+
+.boton1{
+  border: 2px solid;
+  border-color: #3181C3;
+  transition: all 1s ease;
+  /*position: relative;*/
+  position: relative;
+  padding: 50px 1px; /*arriba-abajo, izq-der*/
+  margin: 0px 30px 30px 0px;
+  float: left;
+  border-radius: 15px; /*redondeo de las esquinas*/
+  /*font-family: 'Georgia', cursive;*/
+  font-family: 'Arial';
+  font-size: 20px; /*tamaño letra*/
+  color: white; /*color letra*/
+  width: 190px !important; /*tamaño botones*/
+  height: 130px !important;
+  text-align: center; /*alineacion de texto*/
+  background: #077FD2;
+}
+
+.boton1:hover{
+  -webkit-transform:scale(1.1);transform:scale(1.1); /*Acercamiento*/
+}
+
+.titulo1{
+   color: #3181C3;
+   font-size: 35px;
+   font-weight: 600;
+}
+
+.titulo2{
+  color: #3498DB;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.titulo3{
+   color: #3181C3;
+   font-size: 35px;
+   font-weight: 600;
+   text-align: center;
+}
+
+.subtitulo{
+  color: #3498DB;
+  font-size: 23px;
+}
+
+#tituloTabla{
+  border: 2px solid black;
+  color: white;
+  background-color: #3181C3;
+  text-align: center;
+}
+
+#subtituloTabla{
+  border: 1px solid black;
+}
+
+
+.linkVolver{
+  /*color: #3181C3;
+  font-size: 20px;*/
+  text-decoration: none;
+  /*margin-right: 10px; 
+  float:right;*/
+}
+
+.linkDetalles{
+  color: #3181C3;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+
+#botonInsertar{
+  color: white;
+  background-color: #3181C3;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 85px;
+}
+
+#botonInsertar:hover{
+   color: #3181C3;
+   background-color:white;
+}
+
+#botonBorrar{
+  color: white;
+  background-color: red;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 85px;
+}
+
+
+#botonBorrar:hover{
+   color: red;
+   background-color:white;
+}
+
+#botonMenu{
+  color: white;
+  background-color: green;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 85px;
+  margin-right: 10px; 
+  float:right;
+}
+
+#botonMenu:hover{
+   color: green;
+   background-color:white;
+}
+
+#Patente, #Marca, #Modelo, #Km, #Anio, #Observaciones{
+  border-color: #3181C3; 
+  border-radius: 25px; 
+  text-align: center; 
+  margin: 5px;
+}
+
+
+#botonDetalles{
+  color: white;
+  background-color: #1C9E24;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 85px;
+}
+
+#botonDetalles:hover{
+   color: #1C9E24;
+   background-color:white;
+}
+
+#botonPdf{
+  color: white;
+  background-color: #F3341A;
+  border: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+  width: 85px;
+}
+
+#botonPdf:hover{
+   color: #F3341A;
+   background-color:white;
+}
+
+
+
+/*.input-group { 
+  width: 33%;
+}*/

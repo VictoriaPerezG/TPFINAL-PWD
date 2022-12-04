@@ -1,0 +1,87 @@
+.fondo{
+    background-image: url("../img/fondo5.jpg");
+     background-size:cover;
+     background-position:center;
+     background-repeat:no-repeat;
+     background-attachment: fixed;
+ }
+ .titulo2{
+   color: #3498DB;
+   font-size: 28px;
+   margin-bottom: 10px;
+   font-family: Verdana;
+ }
+ 
+ #columna{
+     background-color: #3498DB;
+ }
+ 
+ #fila{
+    border-color: #3498DB;
+   /*border-color: black;*/
+   font-family: Verdana;
+   font-size: 13px;
+ }
+ 
+ #botonDetalles{
+   color: white;
+   background-color: #1C9E24;
+   border: 2px solid;
+   border-radius: 10px;
+   height: 35px;
+   width: 75px;
+   font-size: 13px;
+   margin-right: 5px;
+ }
+ 
+ #botonDetalles:hover{
+    color: #1C9E24;
+    background-color:white;
+ }
+ 
+ #botonPdf{
+   color: white;
+   background-color: #E74C3C;
+   border: 2px solid;
+   border-radius: 10px;
+   height: 35px;
+   width: 75px;
+   font-size: 13px;
+   margin-right: 5px;
+ }
+ 
+ #botonPdf:hover{
+    color: #E74C3C;
+    background-color:white;
+ }
+ 
+ #botonEditar{
+   color: white;
+   background-color: #0d6efd;
+   border: 2px solid;
+   border-radius: 10px;
+   height: 35px;
+   width: 75px;
+   font-size: 13px;
+   margin-right: 5px;
+ }
+ 
+ #botonEditar:hover{
+    color: #0d6efd;
+    background-color:white;
+ }
+ 
+ #botonAltaProducto{
+   color: white;
+   background-color: #3498DB;
+   border: 2px solid;
+   border-radius: 10px;
+   height: 38px;
+   width: 95px;
+   font-size: 15px;
+ }
+ 
+ #botonAltaProducto:hover{
+    color: #3498DB;
+    background-color:white;
+ }
