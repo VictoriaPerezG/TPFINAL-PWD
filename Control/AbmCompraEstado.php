@@ -120,7 +120,6 @@ class AbmCompraEstado{
      */
     public function buscar($param)
     {
-        //print_r($param);
         $where = " true ";
         if ($param != null) {
             if (isset($param['idcompraEstado']))
@@ -132,7 +131,6 @@ class AbmCompraEstado{
             if (isset($param['cefechafin']))
                 $where .= " and cefechafin ='" . $param['cefechafin'] . "'";
         }
-
         $obj = new CompraEstado();
         $arreglo = $obj->listar($where);
         //print_r($arreglo);

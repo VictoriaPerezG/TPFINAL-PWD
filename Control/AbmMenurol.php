@@ -87,23 +87,25 @@ class AbmMenurol{
         return $arreglo;
     }
 
+
+    //obtengo los objetos Menu a partir del array de idRoles
     public function menusRol($objRol){
-        $param['idrol'] = $objRol->getIdRol();
-        $objMenu = $this->buscar($param);
-        $menuesRoles = [];
-        foreach ($objMenu as $obj) {
-            if (is_array($obj)) {
-                foreach ($obj as $objM) {
-                    array_push($menuRol, $objM);
-                }
-            } else {
-                array_push($menuRol, $obj);
-            }
-        }
         $menues = [];
-        foreach ($menuesRoles as $objetos) {
-            array_push($menues, $objetos->getMenu());
+        foreach ($objRol as $obj) {
+            $objMenurol = new AbmMenurol();
+            $array = ["idrol" => $obj->getIdrol()]; //Creo un array asociativo 
+            $objMenurol = $objMenurol->buscar($array);
+
+                foreach ($objMenurol as $objM) {
+                    if (!in_array($objM->getMenu(), $menues)){
+                        array_push($menues, $objM->getMenu());
+                    }
+                }
         }
         return $menues;
     }
+
+
 }
+
+?>

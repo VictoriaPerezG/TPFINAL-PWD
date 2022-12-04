@@ -125,11 +125,23 @@ class AbmMenu{
         }*/
         $arreglo = Menu::listar($where);  
         return $arreglo;
-            
-            
-      
-        
     }
+
+    
+    /*public function tieneAcceso($objMenus, $link){
+        $salida=false;
+        $contador = count($objMenus);
+        $i=0;
+        while(($i<$contador)&&(!$salida)){
+            $linkAcceso = $objMenus[$i]->getMedescripcion();
+            if (strcmp($linkAcceso, $link) === 0){
+                $salida=true;
+            }
+            $i++;
+        }
+        return $salida;
+        // crear el abm menu rol dentro de la funcion y esta funcion ir en session 
+    }*/
    
 }
 ?>

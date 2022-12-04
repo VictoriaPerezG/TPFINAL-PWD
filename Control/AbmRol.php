@@ -162,5 +162,15 @@ class AbmRol{
         return $arreglo;
     }
     
+
+    public function obtenerObjeto($param){
+        $objRoles=[];
+        foreach($param as $idRol){
+            $param['idrol']=$idRol;
+            $objRol=$this->buscar($param);
+            array_push($objRoles,$objRol[0]);
+        }
+        return $objRoles;
+    }
 }
 ?>

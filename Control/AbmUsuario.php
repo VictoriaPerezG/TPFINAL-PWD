@@ -29,12 +29,18 @@ class AbmUsuario{
                 $resp =true;
             }
         }
+        if($datos['accion']=='registrarse'){
+            if($this->registrar($datos)){
+                $resp =true;
+            }
+        }
         return $resp;
     }
 
 
     public function cargarObjeto($param){
         $obj = null;
+        //print_r($param);
         if(array_key_exists('idusuario',$param) and  array_key_exists('usnombre',$param) and array_key_exists('uspass',$param) and array_key_exists('usmail',$param) and array_key_exists('roles',$param)){
 
             //print_r($param);
@@ -48,7 +54,7 @@ class AbmUsuario{
                 $obj->setear($param["idusuario"], $param["usnombre"], $param["uspass"], $param["usmail"], NULL);
             }
         }
-       // print_r($obj);
+        //print_r($obj);
         return $obj;
     } 
 
@@ -116,6 +122,7 @@ class AbmUsuario{
         $resp = false;
         $param['idusuario'] =null;
         $elObjtTabla = $this->cargarObjeto($param);
+        //[roles] => Array([0] => 2)
         //print_r($elObjtTabla);
 
         //Una vez que se pudo insertar el usuario, cargamos los roles
@@ -124,9 +131,7 @@ class AbmUsuario{
                 $resp = true;
             }
         }
-
-        return $resp;
-        
+        return $resp; 
     }
     /**
      * permite eliminar un objeto 
@@ -161,6 +166,9 @@ class AbmUsuario{
             $elObjAuto = $this->cargarObjeto($param);
 
             if($elObjAuto!=null and $elObjAuto->modificar()){
+
+                $this->asignarRoles($param['roles'], $param['idusuario']);
+                
                 $resp = true;
             }
         }
@@ -257,6 +265,26 @@ class AbmUsuario{
             //array_push($rolesId, $roles);
         }
         return $roles;
+    }
+
+
+     public function registrar($param){
+        //print_r($param);
+        $resp = false;
+        $param['idusuario'] =null;
+        $arrayRoles = array("2");
+        $param['roles'] = $arrayRoles;
+        $elObjtTabla = $this->cargarObjeto($param);
+
+        //print_r($param);
+
+        //Una vez que se pudo insertar el usuario, cargamos los roles
+        if ($elObjtTabla!=null and $elObjtTabla->insertar()){
+            if ($this->asignarRoles($param['roles'], $elObjtTabla->getIdusuario())) {
+                $resp = true;
+            }
+        }
+        return $resp; 
     }
     
 }

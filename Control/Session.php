@@ -1,6 +1,7 @@
 <?php
 class Session{
-    
+    //private $objUsuario;       
+
     public function __construct(){
         if (!session_start()) {
             return false;
@@ -135,19 +136,25 @@ class Session{
         return $resp;
     }
 
-    
-    /**
-     * Da permiso de session a cada script correspondiente con su rol de session 
-     */
-    public function tienePermiso(){
+    public function tieneAcceso($link){
+        $salida=false;
+        $roles = $this->getRoles(); //Obtengo los roles del usuario
         
-        $resp = NULL;
-
-        if($_SESSION['vista']!=NULL){
-            $resp=$_SESSION['vista'];
-        } 
-        
-        return $resp;
+        $objRol = new AbmRol();
+        $objRoles = $objRol->obtenerObjeto($roles); //OBTENGO UN ARRAY DE OBJETOS ROLES
+        $objMenuRol = new AbmMenurol();
+        $objMenus = $objMenuRol->menusRol($objRoles); //OBTENGO UN ARRAY DE MENUS
+       
+        $contador = count($objMenus);
+        $i=0;
+        while(($i<$contador)&&(!$salida)){
+            $linkAcceso = $objMenus[$i]->getMedescripcion();
+            if (strcmp($linkAcceso, $link) === 0){
+                $salida=true;
+            }
+            $i++;
+        }
+        return $salida;
+         
     }
 }
-?>
