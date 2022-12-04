@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Iniciar Sesion</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="bg-image">
+    <div id="main-body" class="container bg-light py-5 text-center opacity-bg">
+        <div class="row py-5">
+            <form action="" method="post" class="col px-4 px-lg-5 mt-5">
+                <h1 class="py-4">Iniciar Sesion</h1>
+                <h4 class="py-4">Usuario</h4>
+                <input type="text" name="" placeholder="Ej: Pepito123..." class="form-control text-center">
+                <h4 class="py-4">Constraseña</h4>
+                <input type="text" name="" placeholder="Su contraseña..." class="form-control text-center">
+                <div class="py-4">
+                    <input type="submit" class="btn btn-secondary px-lg-5" value="Acceder">
+                </div>
+            </form>
+           <!-- <form action="" method="post" class="col px-4 px-lg-5 mt-5">
+                <h1 class="py-4">Registrarse</h1>
+                <h4 class="py-4">Nombre de usuario</h4>
+                <input type="text" name="usuario" placeholder="Ej: PapitoJugoAlDoom66..." class="form-control text-center">
+                <h4 class="py-4">Constraseña</h4>
+                <input type="text" name="pw" placeholder="Su contraseña..." class="form-control text-center">
+                <h4 class="py-4">Confirmar contraseña</h4>
+                <input type="text" name="" placeholder="Ingrese de nuevo su contraseña..."
+                    class="form-control text-center">
+                <h4 class="py-4">Mail</h4>
+                <input type="text" name="" placeholder="Ej: pejelagarto@gmail..." class="form-control text-center">
+                <div class="py-4">
+                    <input type="submit" class="btn btn-secondary px-lg-5" value="Registrarse">
+                </div>
+            </form> -->
+        </div>
+    </div>
+    <footer class="py-4 mt-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Grupo N°3 2022</p>
+        </div>
+    </footer>
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>
