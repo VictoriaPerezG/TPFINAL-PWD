@@ -171,6 +171,7 @@ class Usuario extends BaseDatos{
                         $usuario= new Usuario();
                         $usuario->setIdusuario($row['idusuario']);
                         $usuario->cargar(); 
+                        //print_r($usuario);
                         array_push($arreglo, $usuario);
                     }
                 }
@@ -178,6 +179,7 @@ class Usuario extends BaseDatos{
                 $this->setmensajeoperacion("Tabla->listar: ".$this->getError());
             }
         }
+        //print_r($arreglo);
         return $arreglo;
     }
 }

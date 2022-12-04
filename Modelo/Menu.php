@@ -253,5 +253,6 @@ class Menu {
         
         return $arreglo;
     }
-    }
+
+}
 ?>

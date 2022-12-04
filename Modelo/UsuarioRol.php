@@ -1,10 +1,8 @@
 <?php 
-class UsuarioRol extends BaseDatos 
-{
+class UsuarioRol extends BaseDatos {
     private $objusuario;
     private $objrol;
    
-    
     private $mensajeoperacion;
 
    
@@ -13,8 +11,7 @@ class UsuarioRol extends BaseDatos
         $this->objusuario=new Usuario();
         $this->objrol= new Rol();
        }
-    public function setear($objusuario, $objrol)
-    {
+    public function setear($objusuario, $objrol){
         $this->setobjusuario($objusuario);
         $this->setobjrol($objrol);
        
@@ -82,7 +79,12 @@ class UsuarioRol extends BaseDatos
         return $resp;
     }
     
-   
+      public function modificar(){
+        $resp = false;
+        return $resp;
+    }
+
+
 
     public function eliminar(){
         $resp = false;
