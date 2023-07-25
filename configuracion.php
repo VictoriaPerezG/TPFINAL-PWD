@@ -7,7 +7,7 @@ header ("Cache-Control: no-cache, must-revalidate ");
 
 //$PROYECTO ='PWD_2020/PWD_TPFinal';
 
-$PROYECTO ='PWD_TPFinal';
+$PROYECTO ='TPFINAL-PWD';
 
 //variable que almacena el directorio del proyecto
 $ROOT =$_SERVER['DOCUMENT_ROOT']."/$PROYECTO/";
