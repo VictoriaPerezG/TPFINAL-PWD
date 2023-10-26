@@ -1,4 +1,8 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception; 
+
 class AbmCompra{
     
     /**
@@ -192,6 +196,6 @@ class AbmCompra{
         $idUltimaCompra = $arreglo->getIdcompra();
         return $idUltimaCompra;
     }
-    
+
 }
 ?>
