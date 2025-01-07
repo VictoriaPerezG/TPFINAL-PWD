@@ -3,6 +3,7 @@ include_once '../../configuracion.php';
 
 $objTrans = new Session();
 $resp = $objTrans->validar();
+
 if($resp){
   $usuario = $objTrans->getUsuario()->getUsnombre();
   $conSession = true;

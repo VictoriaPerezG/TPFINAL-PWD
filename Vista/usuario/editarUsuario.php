@@ -2,8 +2,16 @@
 include_once("../estructura/cabecera.php");
 include_once '../../configuracion.php';
 
+if (!$resp){?>
+  <br>
+  <div style="text-align: center;"><span style="color:#3498DB;  font-size: 40px;"><?php echo "No tiene permisos";?></span></div>
+  <div style="text-align: center;"><span style="color:#3498DB;  font-size: 25px;"><?php echo "Sera redirigido";?></span></div>
+  <meta http-equiv="refresh" content="2;url=../principal/home.php"/> 
+ 
+<?php } ?>
 
-if($resp ){
+
+<!-- if($resp ){
 
 $datos = data_submitted();
 $objAbmUsuario = new AbmUsuario();
@@ -20,7 +28,7 @@ $cantidadRoles = count($rolesUsuario);
 
 
  
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -99,16 +107,15 @@ $cantidadRoles = count($rolesUsuario);
 </body>
 </html>
 
-<?php
-    }
-    else{
+/* <?php
+   // else{
 ?>
-      <br>
+      <!-- <br>
       <div style="text-align: center;"><span style="color:#3498DB;  font-size: 40px;"><?php echo "No tiene permisos";?></span></div>
       <div style="text-align: center;"><span style="color:#3498DB;  font-size: 25px;"><?php echo "Sera redirigido";?></span></div>
-      <meta http-equiv="refresh" content="2;url=../principal/home.php"/>
-<?php  }
-?>
+      <meta http-equiv="refresh" content="2;url=../principal/home.php"/> -->
+<?php  //}
+ ?> */
 
 
 
