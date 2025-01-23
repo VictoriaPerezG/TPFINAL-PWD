@@ -66,6 +66,26 @@ class Session{
     }
 
 
+    /** NUEVA FUNCION PARA PROBAR DONDE SE SACA LA LOGICA DE LA CABECERA Y SE HACE ACA 
+ * Verifica si la sesión está activa y si el usuario está logueado.
+ * Devuelve true si la sesión está activa y contiene un usuario válido, de lo contrario, false.
+ */
+// public function activa() {
+//     // Verifica si no se está ejecutando desde la línea de comandos (CLI)
+//     if (php_sapi_name() === 'cli') {
+//         return false;
+//     }
+
+//     // Verifica si la sesión está activa según la versión de PHP
+//     $sesionActiva = version_compare(phpversion(), '5.4.0', '>=')
+//         ? session_status() === PHP_SESSION_ACTIVE
+//         : session_id() !== '';
+
+//     // Verifica si la sesión contiene un usuario válido
+//     return $sesionActiva && isset($_SESSION['idusuario']);
+// }
+
+
     public function estaActiva(){
         $resp=isset($_SESSION["usnombre"])? TRUE : FALSE;
         return $resp;

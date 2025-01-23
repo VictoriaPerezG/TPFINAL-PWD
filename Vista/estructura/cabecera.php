@@ -13,17 +13,34 @@ if($resp){
   $objMenuRol = new AbmMenurol();
   $objMenus = $objMenuRol->menusRol($objRoles); //OBTENGO UN ARRAY DE MENUS
 
+
+  //NUEVA VALIDACION DE LA SESSION SIN TENER QUE POBW¿ERLO EN LA VISTA 
+  /*include_once '../../configuracion.php';
+
+$objSession = new Session();
+if (!$objSession->activa()) {
+    // Redirige al inicio de sesión si la sesión no está activa
+    header('Location: ../sesion/iniciarSesion.php');
+    exit;
+} */
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<html lang="es">
   <head>
-  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EyeShop</title>
   <link rel="icon" type="image/png" href="../img/logo.ico"/>
   <link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../sweetalert/sweetalert2.min.css">
   <script type="text/javascript" src="../sweetalert/sweetalert2.min.js"></script>
   <script type="text/javascript" src="../jquery-3.5.1.js"></script>
-  
+  <style>
+        .navbar .btn {
+            margin: 0 5px;
+        }
+    </style>
 </head>
 <body class="fondo"><br><br>
   
